@@ -1,7 +1,7 @@
 import bubaImg from "../src/assets/buba.png";
 import charmImg from "../src/assets/charm.png";
 import squirtleImg from "../src/assets/squirtle.png";
-import { Container } from "./assets/App";
+import { Container } from "./Style";
 
 type FotoPokemon = {
   bubassauro: string;
@@ -41,13 +41,13 @@ function App() {
     <ul>
       {pokemons.map((pokemon) => {
         return (
-          <li key={pokemon.id}>
+          <div key={pokemon.id}>
             <Container>
-              <h2>{pokemon.nome}</h2>
+              <h1>{pokemon.nome}</h1>
               <span>Força: {pokemon.forca}</span>
               <img src={fotoPokemon[pokemon.nome]} />
             </Container>
-          </li>
+          </div>
         );
       })}
     </ul>
